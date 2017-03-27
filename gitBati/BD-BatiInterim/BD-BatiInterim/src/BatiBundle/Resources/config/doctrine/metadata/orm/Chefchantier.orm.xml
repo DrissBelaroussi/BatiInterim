@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Chefchantier" table="chefchantier">
+    <indexes>
+      <index name="FK_ChefChantier_idChantier" columns="idChantier"/>
+      <index name="FK_ChefChantier_idEntrepreneur" columns="idEntrepreneur"/>
+    </indexes>
+    <id name="idchefchantier" type="integer" column="idChefChantier">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nomchef" type="string" column="nomChef" length="25" nullable="false"/>
+    <field name="prenomchef" type="string" column="prenomChef" length="25" nullable="false"/>
+    <many-to-one field="identrepreneur" target-entity="Entrepreneur">
+      <join-columns>
+        <join-column name="idEntrepreneur" referenced-column-name="idEntrepreneur"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idchantier" target-entity="Chantier">
+      <join-columns>
+        <join-column name="idChantier" referenced-column-name="idChantier"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

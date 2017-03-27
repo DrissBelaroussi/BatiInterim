@@ -1,0 +1,31 @@
+{# empty Twig template #}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bati-Interim</title>
+
+
+{% stylesheets '@BatiBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+        
+        
+</head>
+<body>
+    
+
+{% if formG is defined %}
+    {{form(formG)}}
+{%endif%}
+
+{% if artisan is defined %}
+        Artisan : 
+        {{artisan.nom}}
+        {{artisan.prenom}} 
+         
+ {%endif%}
+    
+    
+    
+  
+    </body>

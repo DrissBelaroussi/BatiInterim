@@ -1,0 +1,35 @@
+{# empty Twig template #}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bati-Interim</title>
+        
+        
+</head>
+<body>
+    
+    {% if Gestionnaire is defined %}
+        Bienvenue 
+        {{Gestionnaire.prenomg}}
+        {{Gestionnaire.nomg}}      
+    {%endif%}
+    
+    
+<form class ="formConnexion" action="{{ path('GestionArtisan') }}" method="post">
+    <input  type="submit" value="Gérer les artisans" />
+</form>
+    
+<form  class ="formConnexion" action="{{ path('GestionEntrepreneur') }}" method="post">
+    <input type="submit" value="Gérer les entrepreneurs" />
+</form>
+    
+    
+    {% if artisan is defined %}
+        Artisan : 
+        {{artisan.nom}}
+        {{artisan.prenom}} 
+         
+    {%endif%}
+    
+
+

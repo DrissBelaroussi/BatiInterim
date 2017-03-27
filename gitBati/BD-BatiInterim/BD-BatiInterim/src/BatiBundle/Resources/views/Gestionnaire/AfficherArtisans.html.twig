@@ -1,0 +1,27 @@
+{# empty Twig template #}
+<table>
+{% if lesArtisans is defined %}
+    {% for unArtisan in lesArtisans %}
+        <tr>
+            <td>{{unArtisan.idartisan}}</td>
+            <td>{{unArtisan.nom}}</td>
+            <td>{{unArtisan.prenom}}</td>
+            <td>
+                <form class ="formConnexion" action="{{ path('SupprimerArtisan') }}" method="GET">
+                    <input  type="submit" value="Supprimer" />
+                    <input type="hidden" name="idArtisan" value="{{unArtisan.idartisan}}">                       
+                </form>
+            </td>
+            
+            <td>
+                <form class ="formConnexion" action="{{ path('ModifierArtisan') }}" method="GET">
+                    <input  type="submit" value="Modifier" />
+                    <input type="hidden" name="idArtisan" value="{{unArtisan.idartisan}}">                       
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    
+ {% endif%}
+
+</table>

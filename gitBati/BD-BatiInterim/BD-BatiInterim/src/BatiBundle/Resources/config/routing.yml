@@ -1,0 +1,82 @@
+
+
+Connexion:
+    path:     /home
+    defaults: { _controller: BatiBundle:Default:connexion }
+
+ConnexionA:
+    path:     /home/connexionA
+    defaults: { _controller: BatiBundle:Default:connexionA }
+    
+ConnexionE:
+    path:     /home/connexionE
+    defaults: { _controller: BatiBundle:Default:connexionE }
+    
+GestionArtisan:
+    path:     /home/GestionA
+    defaults: { _controller: BatiBundle:Default:gestionA }
+    
+GestionEntrepreneur:
+    path:     /home/GestionE
+    defaults: { _controller: BatiBundle:Default:gestionE }
+    
+CreerArtisan:
+    path:     /home/CreerArtisan
+    defaults: { _controller: BatiBundle:Default:creerArtisan }
+    
+CreerEntrepreneur:
+    path:     /home/CreerEntrepreneur
+    defaults: { _controller: BatiBundle:Default:creerEntrepreneur }
+    
+ModifierArtisan:
+    path:     /home/ModifierArtisan
+    defaults: { _controller: BatiBundle:Default:modifierArtisan }
+    
+ModifierEntrepreneur:
+    path:     /home/ModifierEntrepreneur
+    defaults: { _controller: BatiBundle:Default:modifierEntrepreneur }
+    
+SupprimerArtisan:
+    path:     /home/SupprimerArtisan
+    defaults: { _controller: BatiBundle:Default:supprimerArtisan }
+    
+SupprimerEntrepreneur:
+    path:     /home/SupprimerEntrepreneur
+    defaults: { _controller: BatiBundle:Default:supprimerEntrepreneur }
+    
+AfficherArtisans:
+    path:     /home/AfficherArtisans
+    defaults: { _controller: BatiBundle:Default:afficherArtisans }
+    
+GererArtisans:
+    path:     /home/GererArtisans
+    defaults: { _controller: BatiBundle:Default:gererArtisans }
+    
+GererChantiers:
+    path:     /home/GererChantiers
+    defaults: { _controller: BatiBundle:Default:gererChantiers }
+    
+ConsulterAffectations:
+    path:     /home/ConsulterAffectations
+    defaults: { _controller: BatiBundle:Default:consulterAffectations }
+    
+CreerChantier:
+    path:     /home/CreerChantier
+    defaults: { _controller: BatiBundle:Default:creerChantier }
+    
+ConsulterChantiers:
+    path:     /home/ConsulterChantier
+    defaults: { _controller: BatiBundle:Default:consulterChantiers }
+    
+
+CreerMission:
+    path:     /home/CreerMission
+    defaults: { _controller: BatiBundle:Default:creerMission }
+    
+ConsulterMissions:
+    path:     /home/ConsulterMissions
+    defaults: { _controller: BatiBundle:Default:consulterMissions }  
+
+
+    
+

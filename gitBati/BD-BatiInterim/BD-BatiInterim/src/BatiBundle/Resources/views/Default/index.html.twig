@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bati-Interim</title>
+        <h3>BâtiInterim</h3>
+        
+         
+       {% stylesheets '@BatiBundle/Resources/public/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+        
+         {#<style>
+         <script type="text/javascript" src="{{ asset('js/jquery') }}"></script>
+         <script src="{{ asset('js/bootstrap.js') }}"></script>
+            h3{
+                //background-color: black ;
+                text-align : center ;
+                color : white ; 
+                width : 100% ;
+                height : 100% ; 
+            }
+            
+            body{
+                background-color : #565656 ;
+                color: white ; 
+                font-family: fantasy ;
+            }
+           
+            
+            .formConnexion{
+                width : auto ;
+                padding:0px;
+                margin:0px;
+                display : inline-block ;
+            }
+        </style>#}
+</head>
+<body>
+
+<p> </p>
+
+Connexion
+
+{% if form is defined %}
+    {{form(form)}}
+{%endif%}
+
+{% if user is defined %}
+        Utilisation : 
+        {{user.nom}}
+        {{user.prenom}} 
+         
+ {%endif%}
+
+
+{#<form class ="formConnexion"  action="{{ path('ConnexionG') }}" method="post">
+    <button class="btn btn-primary" type="submit">Gestionnaire </button>
+</form>
+    
+<form  class ="formConnexion" action="{{ path('ConnexionA') }}" method="post">
+    <input class="btn btn-primary" type="submit" value="Artisan" />
+</form>
+    
+<form  class ="formConnexion" action="{{ path('ConnexionE') }}" method="post">
+    <input class="btn btn-primary" type="submit" value="Entrepreneur" />
+</form>#}
+
+</body>
+
+
+</html>
+
